@@ -1,502 +1,501 @@
+<!DOCTYPE html>
 <html lang="en" ng-app="rana">
 
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-  <meta name="description" content="Sports, Realtime and More">
-  <meta name="author" content="">
-  <link rel="icon" href="/favicon.ico">
-  <title>Design Dev</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<meta name="description" content="Sports, Realtime and More">
+	<meta name="author" content="">
+	<title>Design Dev</title>
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="../bower_components/angular-material/angular-material.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="stylesheet" href="css/scorer.css">
+	<link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../bower_components/angular-material/angular-material.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="css/scorer.css">
 
 </head>
 
 <body>
-  <div ng-view>
-    <div class="container">
-      <div layout="row" layout-align="start center">
-        <img src="./images/logo.png" width="215" height="70">
-      </div>
+	<div class="container">
+		<div layout="row" layout-align="start center">
+			<img src="./images/logo.png" width="215" height="70">
+		</div>
 
-      <div layout="row">
-        <section class="md-whiteframe-z3">
-          <md-toolbar md-scroll-shrink>
-            <div class="md-toolbar-tools" layout-align="center center">
-              <h2>Points Table</h2>
-            </div>
-          </md-toolbar>
+		<div layout="row">
+			<section class="md-whiteframe-z3">
+				<md-toolbar md-scroll-shrink>
+					<div class="md-toolbar-tools" layout-align="center center">
+						<h2>Points Table</h2>
+					</div>
+				</md-toolbar>
 
-          <table class="table table-bordered">
-            <tr bgcolor="#a9b2aa">
-              <th>
-                <div layout="row" layout-align="center center">No </div>
-              </th>
-              <th>
-                <div layout="row" layout-align="center center">Team Name </div>
-              </th>
-              <th>
-                <div layout="row" layout-align="center center"> P</div>
-              </th>
-              <th>
-                <div layout="row" layout-align="center center"> W </div>
-              </th>
-              <th>
-                <div layout="row" layout-align="center center">L</div>
-              </th>
-            </tr>
-            <tr>
-              <td>
-                <div layout="row" layout-align="center center"> 1</div>
-              </td>
-              <td>
-                <div layout="row" layout-align="center center">U MUMBA </div>
-              </td>
-              <td>
-                <div layout="row" layout-align="center center">14 </div>
-              </td>
-              <td>
-                <div layout="row" layout-align="center center">12 </div>
-              </td>
-              <td>
-                <div layout="row" layout-align="center center">2 </div>
-              </td>
-              <td>
-                <div layout="row" layout-align="center center">60 </div>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <div layout="row" layout-align="center center"> 2</div>
-              </td>
-              <td>
-                <div layout="row" layout-align="center center">TELUGU TITANS </div>
-              </td>
-              <td>
-                <div layout="row" layout-align="center center">14 </div>
-              </td>
-              <td>
-                <div layout="row" layout-align="center center">8 </div>
-              </td>
-              <td>
-                <div layout="row" layout-align="center center">3 </div>
-              </td>
-              <td>
-                <div layout="row" layout-align="center center">50 </div>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <div layout="row" layout-align="center center"> 3</div>
-              </td>
-              <td>
-                <div layout="row" layout-align="center center">BENGALURU BULLS </div>
-              </td>
-              <td>
-                <div layout="row" layout-align="center center">13 </div>
-              </td>
-              <td>
-                <div layout="row" layout-align="center center">8 </div>
-              </td>
-              <td>
-                <div layout="row" layout-align="center center">5 </div>
-              </td>
-              <td>
-                <div layout="row" layout-align="center center">43 </div>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <div layout="row" layout-align="center center"> 4</div>
-              </td>
-              <td>
-                <div layout="row" layout-align="center center">JAIPUR PINK PANTHERS </div>
-              </td>
-              <td>
-                <div layout="row" layout-align="center center">13 </div>
-              </td>
-              <td>
-                <div layout="row" layout-align="center center">6 </div>
-              </td>
-              <td>
-                <div layout="row" layout-align="center center">6 </div>
-              </td>
-              <td>
-                <div layout="row" layout-align="center center">37 </div>
-              </td>
-            </tr>
+				<table class="table table-bordered">
+					<tr bgcolor="#a9b2aa">
+						<th>
+							<div layout="row" layout-align="center center">No </div>
+						</th>
+						<th>
+							<div layout="row" layout-align="center center">Team Name </div>
+						</th>
+						<th>
+							<div layout="row" layout-align="center center"> P</div>
+						</th>
+						<th>
+							<div layout="row" layout-align="center center"> W </div>
+						</th>
+						<th>
+							<div layout="row" layout-align="center center">L</div>
+						</th>
+            <th>
+							<div layout="row" layout-align="center center">Points</div>
+						</th>
+					</tr>
+					<tr>
+						<td>
+							<div layout="row" layout-align="center center"> 1</div>
+						</td>
+						<td>
+							<div layout="row" layout-align="center center">U MUMBA </div>
+						</td>
+						<td>
+							<div layout="row" layout-align="center center">14 </div>
+						</td>
+						<td>
+							<div layout="row" layout-align="center center">12 </div>
+						</td>
+						<td>
+							<div layout="row" layout-align="center center">2 </div>
+						</td>
+						<td>
+							<div layout="row" layout-align="center center">60 </div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div layout="row" layout-align="center center"> 2</div>
+						</td>
+						<td>
+							<div layout="row" layout-align="center center">TELUGU TITANS </div>
+						</td>
+						<td>
+							<div layout="row" layout-align="center center">14 </div>
+						</td>
+						<td>
+							<div layout="row" layout-align="center center">8 </div>
+						</td>
+						<td>
+							<div layout="row" layout-align="center center">3 </div>
+						</td>
+						<td>
+							<div layout="row" layout-align="center center">50 </div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div layout="row" layout-align="center center"> 3</div>
+						</td>
+						<td>
+							<div layout="row" layout-align="center center">BENGALURU BULLS </div>
+						</td>
+						<td>
+							<div layout="row" layout-align="center center">13 </div>
+						</td>
+						<td>
+							<div layout="row" layout-align="center center">8 </div>
+						</td>
+						<td>
+							<div layout="row" layout-align="center center">5 </div>
+						</td>
+						<td>
+							<div layout="row" layout-align="center center">43 </div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div layout="row" layout-align="center center"> 4</div>
+						</td>
+						<td>
+							<div layout="row" layout-align="center center">JAIPUR PINK PANTHERS </div>
+						</td>
+						<td>
+							<div layout="row" layout-align="center center">13 </div>
+						</td>
+						<td>
+							<div layout="row" layout-align="center center">6 </div>
+						</td>
+						<td>
+							<div layout="row" layout-align="center center">6 </div>
+						</td>
+						<td>
+							<div layout="row" layout-align="center center">37 </div>
+						</td>
+					</tr>
 
-            <tr>
-              <td>
-                <div layout="row" layout-align="center center"> 5</div>
-              </td>
-              <td>
-                <div layout="row" layout-align="center center">PATNA PIRATES </div>
-              </td>
-              <td>
-                <div layout="row" layout-align="center center">13 </div>
-              </td>
-              <td>
-                <div layout="row" layout-align="center center">6 </div>
-              </td>
-              <td>
-                <div layout="row" layout-align="center center">6 </div>
-              </td>
-              <td>
-                <div layout="row" layout-align="center center">36 </div>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <div layout="row" layout-align="center center"> 6</div>
-              </td>
-              <td>
-                <div layout="row" layout-align="center center">BENGAL WARRIRORS </div>
-              </td>
-              <td>
-                <div layout="row" layout-align="center center">14 </div>
-              </td>
-              <td>
-                <div layout="row" layout-align="center center">4 </div>
-              </td>
-              <td>
-                <div layout="row" layout-align="center center">9 </div>
-              </td>
-              <td>
-                <div layout="row" layout-align="center center">27 </div>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <div layout="row" layout-align="center center"> 7</div>
-              </td>
-              <td>
-                <div layout="row" layout-align="center center">DABANG DELHI </div>
-              </td>
-              <td>
-                <div layout="row" layout-align="center center">14 </div>
-              </td>
-              <td>
-                <div layout="row" layout-align="center center">4</div>
-              </td>
-              <td>
-                <div layout="row" layout-align="center center">9 </div>
-              </td>
-              <td>
-                <div layout="row" layout-align="center center">27 </div>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <div layout="row" layout-align="center center"> 8</div>
-              </td>
-              <td>
-                <div layout="row" layout-align="center center">PUNERI PALTAN </div>
-              </td>
-              <td>
-                <div layout="row" layout-align="center center">13 </div>
-              </td>
-              <td>
-                <div layout="row" layout-align="center center">2 </div>
-              </td>
-              <td>
-                <div layout="row" layout-align="center center">10 </div>
-              </td>
-              <td>
-                <div layout="row" layout-align="center center">20 </div>
-              </td>
-            </tr>
-          </table>
+					<tr>
+						<td>
+							<div layout="row" layout-align="center center"> 5</div>
+						</td>
+						<td>
+							<div layout="row" layout-align="center center">PATNA PIRATES </div>
+						</td>
+						<td>
+							<div layout="row" layout-align="center center">13 </div>
+						</td>
+						<td>
+							<div layout="row" layout-align="center center">6 </div>
+						</td>
+						<td>
+							<div layout="row" layout-align="center center">6 </div>
+						</td>
+						<td>
+							<div layout="row" layout-align="center center">36 </div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div layout="row" layout-align="center center"> 6</div>
+						</td>
+						<td>
+							<div layout="row" layout-align="center center">BENGAL WARRIRORS </div>
+						</td>
+						<td>
+							<div layout="row" layout-align="center center">14 </div>
+						</td>
+						<td>
+							<div layout="row" layout-align="center center">4 </div>
+						</td>
+						<td>
+							<div layout="row" layout-align="center center">9 </div>
+						</td>
+						<td>
+							<div layout="row" layout-align="center center">27 </div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div layout="row" layout-align="center center"> 7</div>
+						</td>
+						<td>
+							<div layout="row" layout-align="center center">DABANG DELHI </div>
+						</td>
+						<td>
+							<div layout="row" layout-align="center center">14 </div>
+						</td>
+						<td>
+							<div layout="row" layout-align="center center">4</div>
+						</td>
+						<td>
+							<div layout="row" layout-align="center center">9 </div>
+						</td>
+						<td>
+							<div layout="row" layout-align="center center">27 </div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div layout="row" layout-align="center center"> 8</div>
+						</td>
+						<td>
+							<div layout="row" layout-align="center center">PUNERI PALTAN </div>
+						</td>
+						<td>
+							<div layout="row" layout-align="center center">13 </div>
+						</td>
+						<td>
+							<div layout="row" layout-align="center center">2 </div>
+						</td>
+						<td>
+							<div layout="row" layout-align="center center">10 </div>
+						</td>
+						<td>
+							<div layout="row" layout-align="center center">20 </div>
+						</td>
+					</tr>
+				</table>
 
-          <div>
-            <md-content class="md-padding">
-              <md-tabs md-dynamic-height md-border-bottom class="md-primary">
-                <md-tab label="TOP RAIDER">
-                  <md-content class="md-padding">
-                    <table class="  table  table-bordered">
-                      <tr bgcolor="#a9b2aa">
-                        <th>
-                          <div layout="row" layout-align="center center">No </div>
-                        </th>
-                        <th>
-                          <div layout="row" layout-align="center center">PLAYER</div>
-                        </th>
-                        <th>
-                          <div layout="row" layout-align="center center"> RAIDS</div>
-                        </th>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div layout="row" layout-align="center center"> 1</div>
-                        </td>
-                        <td>
-                          <div layout="row" layout-align="center center">KASHILING ADAKE</div>
-                        </td>
-                        <td>
-                          <div layout="row" layout-align="center center">87 </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div layout="row" layout-align="center center"> 2</div>
-                        </td>
-                        <td>
-                          <div layout="row" layout-align="center center">RAHUL CHAUDHARI </div>
-                        </td>
-                        <td>
-                          <div layout="row" layout-align="center center">60 </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div layout="row" layout-align="center center"> 3</div>
-                        </td>
-                        <td>
-                          <div layout="row" layout-align="center center">ANUP KUMAR </div>
-                        </td>
-                        <td>
-                          <div layout="row" layout-align="center center">51 </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div layout="row" layout-align="center center"> 4</div>
-                        </td>
-                        <td>
-                          <div layout="row" layout-align="center center">RAJESH NARWAL </div>
-                        </td>
-                        <td>
-                          <div layout="row" layout-align="center center">50</div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div layout="row" layout-align="center center"> 5</div>
-                        </td>
-                        <td>
-                          <div layout="row" layout-align="center center">DEEPAK NIVAS </div>
-                        </td>
-                        <td>
-                          <div layout="row" layout-align="center center">49 </div>
-                        </td>
-                      </tr>
-                    </table>
-                  </md-content>
-                </md-tab>
-                <md-tab label="TOP TACKLERS">
-                  <md-content class="md-padding">
+				<div>
+					<md-content class="md-padding">
+						<md-tabs md-dynamic-height md-border-bottom>
+							<md-tab label="TOP RAIDER">
+								<md-content class="md-padding">
+									<table class="  table  table-bordered">
+										<tr bgcolor="#a9b2aa">
+											<th>
+												<div layout="row" layout-align="center center">No </div>
+											</th>
+											<th>
+												<div layout="row" layout-align="center center">PLAYER</div>
+											</th>
+											<th>
+												<div layout="row" layout-align="center center"> RAIDS</div>
+											</th>
+										</tr>
+										<tr>
+											<td>
+												<div layout="row" layout-align="center center"> 1</div>
+											</td>
+											<td>
+												<div layout="row" layout-align="center center">KASHILING ADAKE</div>
+											</td>
+											<td>
+												<div layout="row" layout-align="center center">87 </div>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<div layout="row" layout-align="center center"> 2</div>
+											</td>
+											<td>
+												<div layout="row" layout-align="center center">RAHUL CHAUDHARI </div>
+											</td>
+											<td>
+												<div layout="row" layout-align="center center">60 </div>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<div layout="row" layout-align="center center"> 3</div>
+											</td>
+											<td>
+												<div layout="row" layout-align="center center">ANUP KUMAR </div>
+											</td>
+											<td>
+												<div layout="row" layout-align="center center">51 </div>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<div layout="row" layout-align="center center"> 4</div>
+											</td>
+											<td>
+												<div layout="row" layout-align="center center">RAJESH NARWAL </div>
+											</td>
+											<td>
+												<div layout="row" layout-align="center center">50</div>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<div layout="row" layout-align="center center"> 5</div>
+											</td>
+											<td>
+												<div layout="row" layout-align="center center">DEEPAK NIVAS </div>
+											</td>
+											<td>
+												<div layout="row" layout-align="center center">49 </div>
+											</td>
+										</tr>
+									</table>
+								</md-content>
+							</md-tab>
+							<md-tab label="TOP TACKLERS">
+								<md-content class="md-padding">
 
-                    <table class="table  table-bordered">
-                      <tr bgcolor="#a9b2aa">
-                        <th>
-                          <div layout="row" layout-align="center center">No </div>
-                        </th>
-                        <th>
-                          <div layout="row" layout-align="center center">PLAYER</div>
-                        </th>
-                        <th>
-                          <div layout="row" layout-align="center center"> TACKLES</div>
-                        </th>
+									<table class="table  table-bordered">
+										<tr bgcolor="#a9b2aa">
+											<th>
+												<div layout="row" layout-align="center center">No </div>
+											</th>
+											<th>
+												<div layout="row" layout-align="center center">PLAYER</div>
+											</th>
+											<th>
+												<div layout="row" layout-align="center center"> TACKLES</div>
+											</th>
 
-                      </tr>
+										</tr>
 
-                      <tr>
-                        <td>
-                          <div layout="row" layout-align="center center"> 1</div>
-                        </td>
-                        <td>
-                          <div layout="row" layout-align="center center">KASHILING ADAKE</div>
-                        </td>
-                        <td>
-                          <div layout="row" layout-align="center center">87 </div>
-                        </td>
+										<tr>
+											<td>
+												<div layout="row" layout-align="center center"> 1</div>
+											</td>
+											<td>
+												<div layout="row" layout-align="center center">KASHILING ADAKE</div>
+											</td>
+											<td>
+												<div layout="row" layout-align="center center">87 </div>
+											</td>
 
-                      </tr>
-                      <tr>
-                        <td>
-                          <div layout="row" layout-align="center center"> 2</div>
-                        </td>
-                        <td>
-                          <div layout="row" layout-align="center center">RAHUL CHAUDHARI </div>
-                        </td>
-                        <td>
-                          <div layout="row" layout-align="center center">60 </div>
-                        </td>
+										</tr>
+										<tr>
+											<td>
+												<div layout="row" layout-align="center center"> 2</div>
+											</td>
+											<td>
+												<div layout="row" layout-align="center center">RAHUL CHAUDHARI </div>
+											</td>
+											<td>
+												<div layout="row" layout-align="center center">60 </div>
+											</td>
 
-                      </tr>
-                      <tr>
-                        <td>
-                          <div layout="row" layout-align="center center"> 3</div>
-                        </td>
-                        <td>
-                          <div layout="row" layout-align="center center">ANUP KUMAR </div>
-                        </td>
-                        <td>
-                          <div layout="row" layout-align="center center">51 </div>
-                        </td>
+										</tr>
+										<tr>
+											<td>
+												<div layout="row" layout-align="center center"> 3</div>
+											</td>
+											<td>
+												<div layout="row" layout-align="center center">ANUP KUMAR </div>
+											</td>
+											<td>
+												<div layout="row" layout-align="center center">51 </div>
+											</td>
 
-                      </tr>
-                      <tr>
-                        <td>
-                          <div layout="row" layout-align="center center"> 4</div>
-                        </td>
-                        <td>
-                          <div layout="row" layout-align="center center">RAJESH NARWAL </div>
-                        </td>
-                        <td>
-                          <div layout="row" layout-align="center center">50</div>
-                        </td>
+										</tr>
+										<tr>
+											<td>
+												<div layout="row" layout-align="center center"> 4</div>
+											</td>
+											<td>
+												<div layout="row" layout-align="center center">RAJESH NARWAL </div>
+											</td>
+											<td>
+												<div layout="row" layout-align="center center">50</div>
+											</td>
 
-                      </tr>
+										</tr>
 
-                      <tr>
-                        <td>
-                          <div layout="row" layout-align="center center"> 5</div>
-                        </td>
-                        <td>
-                          <div layout="row" layout-align="center center">DEEPAK NIVAS </div>
-                        </td>
-                        <td>
-                          <div layout="row" layout-align="center center">49 </div>
-                        </td>
+										<tr>
+											<td>
+												<div layout="row" layout-align="center center"> 5</div>
+											</td>
+											<td>
+												<div layout="row" layout-align="center center">DEEPAK NIVAS </div>
+											</td>
+											<td>
+												<div layout="row" layout-align="center center">49 </div>
+											</td>
 
-                      </tr>
+										</tr>
 
-                    </table>
+									</table>
 
-                  </md-content>
-                </md-tab>
+								</md-content>
+							</md-tab>
 
-              </md-tabs>
-            </md-content>
+						</md-tabs>
+					</md-content>
 
-          </div>
+				</div>
 
-          <div>
-            <md-content class="md-padding">
-              <md-tabs md-dynamic-height md-border-bottom>
-                <md-tab label="RESULTS">
-                  <md-content class="md-padding">
+				<div>
+					<md-content class="md-padding">
+						<md-tabs md-dynamic-height md-border-bottom>
+							<md-tab label="RESULTS">
+								<md-content class="md-padding">
 
-                    <table class="  table  table-general">
-
-
-                      <tr>
-                        <td>
-                          <div layout="row" layout-align="center center">LOGO1</div>
-                        </td>
-                        <td>
-                          <div layout="row" layout-align="center center">U MUMBA ✓</div>
-                        </td>
-                        <td>
-                          <div layout="row" layout-align="center center">40-24 </div>
-                        </td>
-                        <td>
-                          <div layout="row" layout-align="center center">JAIPUR </div>
-                        </td>
-                        <td>
-                          <div layout="row" layout-align="center center">LOGO 2</div>
-                        </td>
+									<table class="  table  table-general">
 
 
-                      </tr>
-                      <tr>
-                        <td>
-                          <div layout="row" layout-align="center center">LOGO1</div>
-                        </td>
-                        <td>
-                          <div layout="row" layout-align="center center">U MUMBA ✓</div>
-                        </td>
-                        <td>
-                          <div layout="row" layout-align="center center">40-24 </div>
-                        </td>
-                        <td>
-                          <div layout="row" layout-align="center center">JAIPUR </div>
-                        </td>
-                        <td>
-                          <div layout="row" layout-align="center center">LOGO 2</div>
-                        </td>
+										<tr>
+											<td>
+												<div layout="row" layout-align="center center">LOGO1</div>
+											</td>
+											<td>
+												<div layout="row" layout-align="center center">U MUMBA ✓</div>
+											</td>
+											<td>
+												<div layout="row" layout-align="center center">40-24 </div>
+											</td>
+											<td>
+												<div layout="row" layout-align="center center">JAIPUR </div>
+											</td>
+											<td>
+												<div layout="row" layout-align="center center">LOGO 2</div>
+											</td>
 
 
-                      </tr>
-
-                    </table>
-                  </md-content>
-                </md-tab>
-                <md-tab label="FIXTURES">
-                  <md-content class="md-padding">
-
-                    <table class="  table  table-general">
-
-
-                      <tr>
-                        <td>
-                          <div layout="row" layout-align="center center">LOGO1</div>
-                        </td>
-                        <td>
-                          <div layout="row" layout-align="center center">U MUMBA </div>
-                        </td>
-                        <td>
-                          <div layout="row" layout-align="center center">21:00 </div>
-                        </td>
-                        <td>
-                          <div layout="row" layout-align="center center">JAIPUR </div>
-                        </td>
-                        <td>
-                          <div layout="row" layout-align="center center">LOGO 2</div>
-                        </td>
+										</tr>
+										<tr>
+											<td>
+												<div layout="row" layout-align="center center">LOGO1</div>
+											</td>
+											<td>
+												<div layout="row" layout-align="center center">U MUMBA ✓</div>
+											</td>
+											<td>
+												<div layout="row" layout-align="center center">40-24 </div>
+											</td>
+											<td>
+												<div layout="row" layout-align="center center">JAIPUR </div>
+											</td>
+											<td>
+												<div layout="row" layout-align="center center">LOGO 2</div>
+											</td>
 
 
-                      </tr>
-                      <tr>
-                        <td>
-                          <div layout="row" layout-align="center center">LOGO1</div>
-                        </td>
-                        <td>
-                          <div layout="row" layout-align="center center">U MUMBA </div>
-                        </td>
-                        <td>
-                          <div layout="row" layout-align="center center">23:00 </div>
-                        </td>
-                        <td>
-                          <div layout="row" layout-align="center center">JAIPUR </div>
-                        </td>
-                        <td>
-                          <div layout="row" layout-align="center center">LOGO 2</div>
-                        </td>
+										</tr>
+
+									</table>
+								</md-content>
+							</md-tab>
+							<md-tab label="FIXTURES">
+								<md-content class="md-padding">
+
+									<table class="  table  table-general">
 
 
-                      </tr>
+										<tr>
+											<td>
+												<div layout="row" layout-align="center center">LOGO1</div>
+											</td>
+											<td>
+												<div layout="row" layout-align="center center">U MUMBA </div>
+											</td>
+											<td>
+												<div layout="row" layout-align="center center">21:00 </div>
+											</td>
+											<td>
+												<div layout="row" layout-align="center center">JAIPUR </div>
+											</td>
+											<td>
+												<div layout="row" layout-align="center center">LOGO 2</div>
+											</td>
 
-                  </md-content>
-                </md-tab>
 
-              </md-tabs>
-            </md-content>
-          </div>
+										</tr>
+										<tr>
+											<td>
+												<div layout="row" layout-align="center center">LOGO1</div>
+											</td>
+											<td>
+												<div layout="row" layout-align="center center">U MUMBA </div>
+											</td>
+											<td>
+												<div layout="row" layout-align="center center">23:00 </div>
+											</td>
+											<td>
+												<div layout="row" layout-align="center center">JAIPUR </div>
+											</td>
+											<td>
+												<div layout="row" layout-align="center center">LOGO 2</div>
+											</td>
 
-        </section>
 
-      </div>
-    </div>
+										</tr>
 
-  </div>
+								</md-content>
+							</md-tab>
 
-  <!-- late loading JS -->
-  <script src="../bower_components/jquery/dist/jquery.min.js"></script>
-  <script src="../bower_components/angular/angular.js"></script>
+						</md-tabs>
+					</md-content>
+				</div>
+
+			</section>
+
+		</div>
+	</div>
+
+
+	<!-- late loading JS -->
+	<script src="../bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="../bower_components/angular/angular.js"></script>
   <script src="../bower_components/angular-material/angular-material.js"></script>
-  <script src="../bower_components/angular-animate/angular-animate.js"></script>
-  <script src="../bower_components/angular-aria/angular-aria.js"></script>
-  <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-  <script src="js/scorer.js"></script>
+	<script src="../bower_components/angular-animate/angular-animate.js"></script>
+	<script src="../bower_components/angular-aria/angular-aria.js"></script>
+	<script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="js/scorer.js"></script>
 
 </body>
 
