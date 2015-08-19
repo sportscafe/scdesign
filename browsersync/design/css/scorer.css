@@ -25,3 +25,107 @@
 
   .tabsdemoDynamicHeight md-content h1:first-child {
     margin-top: 0; }
+
+		.background {
+		    width: 200px;
+		    height: 200px;
+		    background-image: url('/static/images/team_img.PNG');
+		    position: absolute;
+		    z-index: 1;
+		}
+
+		.circle {
+		  width: 10px;
+		  height: 10px;
+		  border-radius: 50%;
+		  -moz-border-radius: 50%;
+		  -webkit-border-radius: 50%;
+		  display: inline-block;
+		  background: #00b3e7;
+
+		}
+
+		.empty-circle {
+		  width: 10px;
+		  height: 10px;
+		  border-radius: 50%;
+		  -moz-border-radius: 50%;
+		  -webkit-border-radius: 50%;
+		  display: inline-block;
+		  background: white;
+
+		}
+
+
+
+
+
+		.md-card.md-default-theme{
+
+		    background-color: #1E90FF;
+		}
+
+
+
+
+
+
+		.f {
+		    position: relative;
+		    display: inline;
+		    top: -67px;
+		}
+
+		.fp {
+		    position: relative;
+				display:inline;
+				top: -67px;
+				right:-450px;
+
+		}
+
+		.buttondemoBasicUsage section {
+		    background: #f7f7f7;
+		    border-radius: 3px;
+		    text-align: center;
+		    margin: 1em;
+		    position: relative !important;
+		    padding-bottom: 10px;
+		}
+
+
+
+
+		.md-button.md-default-theme.md-raised.md-primary {
+		    color: #fff;
+		    background-color: #4caf50;
+		}
+		.md-button.md-default-theme.md-raised.md-warnnn{
+		    color: #000000;
+		    background-color: #c9ccca;
+		}
+
+		.md-button.md-default-theme.md-raised.md-warn {
+		    color: #fff;
+		    background-color: #f44336;
+		}
+		.md-button.md-default-theme.md-raised.md-warnn {
+		    color: #fff;
+		    background-color:#4caf50;
+		}
+
+
+
+		.md-button.md-default-theme.md-info.md-raised:not([disabled]):hover {
+		    background-color: #619bf2;
+		}
+		.md-button.md-default-theme.md-info.md-raised {
+		    background-color: #619bf2;
+		    color: #fff;
+		}
+		.md-button.btn-direction {
+		    overflow: visible;
+		}
+		.md-button {
+		    text-transform: none;
+		}
