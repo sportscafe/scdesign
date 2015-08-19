@@ -26,7 +26,7 @@ module.exports = {
 		usePolling: true
 	},
 	"server": {
-		baseDir: "design/",
+		baseDir: "./",
 		directory: true
 	},
 	"proxy": false,
