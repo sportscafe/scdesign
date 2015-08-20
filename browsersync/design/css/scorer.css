@@ -144,7 +144,9 @@ h3 {
 		margin-top: 10px;
  	 margin-bottom: 10px;
 }
-
+.glyphicon.glyphicon-stop{
+	color:green;
+}
 		.md-button.md-default-theme.md-info.md-raised:not([disabled]):hover {
 		    background-color: #619bf2;
 		}
@@ -158,4 +160,3 @@ h3 {
 		.md-button {
 		    text-transform: none;
 		}
-		
