@@ -65,23 +65,31 @@
 		    background-color: #1E90FF;
 		}
 
+		.fg {
 
 
-
+		}
 
 
 		.f {
 		    position: relative;
-		    display: inline;
-		    top: -67px;
+		    top: -30px;
 		}
 
-		.fp {
-		    position: relative;
-				display:inline;
-				top: -67px;
-				right:-450px;
+		.fg1{
+			position: relative;
+			top: -45px;
+			  margin-bottom:0px
 
+ 	 }
+		.fg2{
+
+				position: relative;
+				top: -50px;
+				margin-bottom:-30px
+		}
+		.rana5{
+			color:white;
 		}
 
 		.buttondemoBasicUsage section {
@@ -95,6 +103,13 @@
 
 
 
+.md-button{
+	margin-top: -2px;
+	    margin-right: -3px;
+			margin-bottom: -2px;
+			margin-left: -3px;
+}
+
 
 		.md-button.md-default-theme.md-raised.md-primary {
 		    color: #fff;
@@ -102,7 +117,7 @@
 		}
 		.md-button.md-default-theme.md-raised.md-warnnn{
 		    color: #000000;
-		    background-color: #c9ccca;
+		    background-color: #e5e7e5;
 		}
 
 		.md-button.md-default-theme.md-raised.md-warn {
@@ -114,7 +129,21 @@
 		    background-color:#4caf50;
 		}
 
+.yash{
+	background-color:#0D47A1;
 
+}
+
+h1 {
+	 font-size: 50px;
+}
+
+h3 {
+    font-size: 24px;
+    color: white;
+		margin-top: 10px;
+ 	 margin-bottom: 10px;
+}
 
 		.md-button.md-default-theme.md-info.md-raised:not([disabled]):hover {
 		    background-color: #619bf2;
@@ -129,3 +158,4 @@
 		.md-button {
 		    text-transform: none;
 		}
+		
