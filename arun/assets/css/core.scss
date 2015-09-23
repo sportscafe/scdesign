@@ -17,7 +17,7 @@
 body{
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
-    background: $black;
+    background: $white;
     line-height: 1.2;
     height: auto;
     min-width: 332px;
@@ -213,7 +213,8 @@ a:hover {
             &:nth-child(3) {
                 padding-left: 30px;
             }
-            &:nth-child(2) {
+            &:nth-child(2), 
+            &:nth-child(3) {
                 background: #dfdfdf;
                 color: rgba(0,0,0,0.5);
                 &:before {
@@ -229,9 +230,16 @@ a:hover {
                 }
             }
             &:nth-child(3) {
+                background: #ededed;
+                &:before {
+                    border-color: transparent transparent #ededed transparent;
+                }
+            }
+
+            &.active {
                 background: $alt-blue;
                 color: $white;
-                &:before {
+                &:not(:first-child):before {
                     content: " ";
                     width: 0;
                     height: 0;
@@ -245,6 +253,23 @@ a:hover {
             }
         }
     }
+    
+    .tabs-content {
+        overflow: hidden;
+        .tab-content {
+            opacity: 0;
+            height: 0;
+            -webkit-transition: all 0.25s linear;
+            -moz-transition: all 1s ease-in-out;
+            -o-transition: all 1s ease-in-out;
+            transition: all 0.25s linear;
+            &.active {
+                height: auto;
+                opacity: 1;
+            }
+        }
+    }
+
     .tab-content {
         .tab-content-wrapper {
             position: relative;
@@ -905,6 +930,22 @@ nav{
             .carousel-title {
                 font-weight: 500;
                 font-size: 21px;
+            }
+        }
+        .carousel-slides {
+            overflow: hidden;
+            height: 335px;
+            .carousel {
+                height: 0;
+                opacity: 0;
+                -webkit-transition: all 1s ease-in-out;
+                -moz-transition: all 1s ease-in-out;
+                -o-transition: all 1s ease-in-out;
+                transition: all 1s ease-in-out;
+                &.active {
+                   height: 335px;
+                   opacity: 1;
+                }
             }
         }
         .carousel {
