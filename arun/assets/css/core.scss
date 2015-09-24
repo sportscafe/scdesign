@@ -1,7 +1,7 @@
 @import "https://fonts.googleapis.com/css?family=Roboto:300,400,700";
 @import "normalize.css";
 @import "angular-material.min.css";
-@import "bootstrap.css";
+@import "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css";
 @import "base";
 
 @font-face {
@@ -95,12 +95,12 @@ a:hover {
 }
 
 .mega-tag {
-    position: relative;
+    position: absolute;
     width: 50%;
     font-size: 1.5em;
     font-weight: bold;
     padding: 6px 20px 6px 71px;
-    margin: 30px 10px 10px -11px;
+    margin: 2px 10px 10px -11px;
     color: #ffffff;
     background-color: $red;
     text-shadow: 0px 1px 2px #bbb;
@@ -123,7 +123,7 @@ a:hover {
         top: 0;
         padding-bottom: 5px;
         padding-top: 5px;
-        padding-left: 5px;
+        padding-left: 15px;
     }
     > .tag-end {
         position: absolute;
@@ -139,7 +139,7 @@ a:hover {
             height: 0;
             border-color: $red transparent transparent transparent;
             border-style: solid;
-            border-width: 28px 25px 0 0;
+            border-width: 28px 20px 0 0;
         }
         &:before {
             content: '';
@@ -151,7 +151,8 @@ a:hover {
             height: 0;
             border-color: $white transparent transparent transparent;
             border-style: solid;
-            border-width: 32px 30px 0 0;
+            border-width: 32px 24px 0 0;
+            border-top-right-radius: 4px;
         }
     }
     &:before,
@@ -179,6 +180,7 @@ a:hover {
         }
         > div {
             font-size: 10px;
+            padding-left: 0px;
         }
         > .tag-end {
             &:before {
@@ -194,27 +196,46 @@ a:hover {
 
 .tab-container {
     margin-top: 20px;
-    .tabs {
+    .nav {
+        li {
+            a {
+                color: #000000;
+            }
+        }
+    }
+    .nav.nav-tabs li{
+        border-left: none;
+        border-top: none;
+        border-right: none;
         border-bottom: 2px solid $alt-blue;
-        a {
+        width: 33.33%;
+        a { 
+            border: none;
             color: $black;
-            width: 30%;
-            display: inline-block;
+            display: block;
+            width: 100%;
             vertical-align: top;
             position: relative;
             padding: 8px 8px 8px 15px;
             font-size: 14px;
             height: 31px;
-            &:first-child {
+            border-radius: 0;
+        }
+        &:first-child {
+            a {
                 background: #ededed;
                 color: rgba(0,0,0,0.5);
             }
-            &:nth-child(2),
-            &:nth-child(3) {
+        }
+        &:nth-child(2),
+        &:nth-child(3) {
+            a {
                 padding-left: 30px;
             }
-            &:nth-child(2), 
-            &:nth-child(3) {
+        }
+        &:nth-child(2), 
+        &:nth-child(3) {
+            a {
                 background: #dfdfdf;
                 color: rgba(0,0,0,0.5);
                 &:before {
@@ -222,32 +243,35 @@ a:hover {
                     width: 0;
                     height: 0;
                     position: absolute;
-                    left: -30px;
-                    top: -1px;
+                    left: -28px;
+                    top: 0;
                     border-style: solid;
-                    border-width: 0 0 32px 30px;
+                    border-width: 0 0 31px 28px;
                     border-color: transparent transparent #dfdfdf transparent;
                 }
             }
-            &:nth-child(3) {
+        }
+        &:nth-child(3) {
+            a {
                 background: #ededed;
                 &:before {
                     border-color: transparent transparent #ededed transparent;
                 }
             }
+        }
 
-            &.active {
+         &.active:first-child {
+            a {
                 background: $alt-blue;
                 color: $white;
-                &:not(:first-child):before {
-                    content: " ";
-                    width: 0;
-                    height: 0;
-                    position: absolute;
-                    left: -30px;
-                    top: -1px;
-                    border-style: solid;
-                    border-width: 0 0 32px 30px;
+            }
+         }
+
+        &.active:not(:first-child) {
+            a {
+                background: $alt-blue;
+                color: $white;
+                &:before {
                     border-color: transparent transparent $alt-blue transparent;
                 }
             }
@@ -913,7 +937,7 @@ nav{
         position: relative;
         header {
             margin-left: 15px;
-            .fire-icon,
+            .fire-icon ,
             .carousel-title {
                 display: inline-block;
                 vertical-align: top;
@@ -932,91 +956,95 @@ nav{
                 font-size: 21px;
             }
         }
-        .carousel-slides {
-            overflow: hidden;
-            height: 335px;
-            .carousel {
-                height: 0;
-                opacity: 0;
-                -webkit-transition: all 1s ease-in-out;
-                -moz-transition: all 1s ease-in-out;
-                -o-transition: all 1s ease-in-out;
-                transition: all 1s ease-in-out;
-                &.active {
-                   height: 335px;
-                   opacity: 1;
-                }
-            }
-        }
-        .carousel {
-            background: url(../images/cover.jpg) no-repeat;
-            background-size: 127%;
+        .carousel-inner {
             position: relative;
-            height: 335px;
-            background-position: top left;
-            img {
-                max-width: 100%;
-            }
-            .carousel-overlay {
-                position: absolute;
-                left: 0;
-                top: 0;
-                bottom: 0;
-                margin: 0 auto;
-                width: 330px;
-                background: url(../images/blue-overlay.png) no-repeat;
-                .overlay-content {
-                    .title {
-                        margin-bottom: 10px;
-                        width: 67%;
-                        color: #ffffff;
-                        font-size: 28px;
-                        margin-top: 65px;
-                        margin-left: 30px;
-                        text-shadow: 0.5px 0px 0.1px #fff;
+            .img-holder{
+                position: relative;
+                .carousel-overlay {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    bottom: 0;
+                    margin: 0 auto;
+                    width: 330px;
+                    z-index: 1;
+                    &:before {
+                        content: " ";
+                        position: absolute;
+                        top: -8px;
+                        left: -162px;
+                        width: 126%;
+                        height: 115%;
+                        background: rgba(19, 87, 168, 0.5);
+                        -ms-transform: rotate(20deg);
+                        -webkit-transform: rotate(20deg);
+                        transform: rotate(35deg);
+                        z-index: -1;
                     }
-                    .btn {
-                        display: inline-block;
-                        vertical-align: top;
-                        background: $grey;
-                        font-size: 12px;
-                        margin-left: 30px;
-                        padding: 8px 24px;
-                        &.btn-circle {
-                            border-radius: 30px;
+                    .overlay-content{
+                        .title {
+                            margin-bottom: 10px;
+                            width: 67%;
+                            color: #ffffff;
+                            font-size: 28px;
+                            margin-top: 95px;
+                            margin-left: 30px;
+                            text-shadow: 0.5px 0px 0.1px #fff;
                         }
-                        &.btn-red {
-                            background: $red;
+                        .btn {
+                            display: inline-block;
+                            vertical-align: top;
+                            background: $grey;
+                            font-size: 12px;
+                            margin-left: 30px;
+                            padding: 8px 24px;
+                            &.btn-circle {
+                                border-radius: 30px;
+                            }
+                            &.btn-red {
+                                background: $red;
+                            }
                         }
                     }
                 }
+                max-height: 335px;
+                overflow: hidden;
+                img {
+                    max-width: 100%;
+                }
             }
+            .carousel-caption {
+                position: static;
+                left: auto;
+                right: auto;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                font-size: 17px;
+                font-weight: 300;
+                text-shadow: 0 0 0 #000;
+                color: $black;
+                p {
+                    margin: 0;
+                }
+            }
+
         }
-        .carousel-description {
-            font-size: 17px;
-            font-weight: 300;
-            margin-top: 10px;
-            margin-bottom: 10px;
-            padding-left: 10px;
-            padding-right: 10px;
-            text-shadow: 0 0 0 #000;
-        }
-        .carousel-dots {
-            text-align: center;
-            margin-top: 20px;
-            a {
+        .carousel-indicators {
+            position: static;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            margin: 0 auto;
+            li {
                 background: url(../images/carousel-dots.png) no-repeat;
-                background-position: -56px 0;
-                background-size: cover;
+                background-position: -49px 0;
                 width: 16px;
                 height: 14px;
-                display: inline-block;
                 vertical-align: top;
+                margin: 0;
                 &.active {
                     background-position: 0 0;
-                }
-                &:hover:not(.active) {
-                    background-position: -28px 0;
                 }
             }
         }
