@@ -1,0 +1,140 @@
+body {
+	background: none;
+	font-family: 'Droid Sans', sans-serif;
+	color: rgb(51,51,51);
+}
+
+.sc-body{
+		height: 100vh;
+		height: 100%;
+		position:relative;
+}
+
+.sc-navbar {
+		position: fixed;
+		top: 0;
+		width: 100%;
+		z-index: 3000;
+}
+
+.sc-content {
+		background-color: rgba(255,255,255,1);
+		position: relative;
+		overflow-x: auto;
+		padding-top: 40px;
+		min-height: 100%;
+		margin-bottom: -200px;
+		box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.14);
+}
+
+// Testing animation:
+// .flex {
+// 	transition: all 700ms ease;
+// }
+
+.sc-footer-margin-placeholder {
+	height: 200px;
+}
+
+.sc-footer {
+		position: relative;
+		height: 200px;
+		width: 100%;
+}
+
+/* http://www.cssmatic.com/box-shadow */
+.sc-left-bar {
+	-webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.28);
+	-moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.28);
+	box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.28);
+}
+
+.sc-center-bar {
+	overflow: hidden;
+}
+
+.sc-right-bar {
+	-webkit-box-shadow: -2px 2px 5px 0px rgba(0,0,0,0.28);
+	-moz-box-shadow: -2px 2px 5px 0px rgba(0,0,0,0.28);
+	box-shadow: -2px 2px 5px 0px rgba(0,0,0,0.28);
+}
+
+/* Customize container */
+@media (min-width: 960px) {
+	.sc-container {
+		max-width: 1400px;
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+	#sportscafe-topnavbar .sc-container { /* to override bootstrap in navbar */
+		max-width: 1400px;
+		margin-right: auto;
+		margin-left: auto;
+		padding-right: 14px;
+	}
+}
+
+.side-box-shadow {
+	box-shadow: -15px 0 15px -15px rgba(0, 0, 0, 0.6),
+             15px 0 15px -15px rgba(0, 0, 0, 0.6);
+}
+
+/** Google material icon fonnts: **/
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(/static/bower_components/material-design-icons/iconfont/MaterialIcons-Regular.eot); /* For IE6-8 */
+  src: local('Material Icons'),
+       local('MaterialIcons-Regular'),
+       url(/static/bower_components/material-design-icons/iconfont/MaterialIcons-Regular.woff2) format('woff2'),
+       url(/static/bower_components/material-design-icons/iconfont/MaterialIcons-Regular.woff) format('woff'),
+       url(/static/bower_components/material-design-icons/iconfont/MaterialIcons-Regular.ttf) format('truetype');
+}
+/**
+In addition, the CSS rules for rendering the icon will need to be declared.
+These rules are normally served as part of the Google Web Font stylesheet,
+but will need to be included manually in your projects when self-hosting the font:
+ **/
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+.material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
+.material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+
+.material-icons.md-light { color: rgba(255, 255, 255, 1); }
+.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
+
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+/** END Google material icon fonts: **/

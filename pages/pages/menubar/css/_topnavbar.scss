@@ -1,0 +1,220 @@
+// #sportscafe-topnavbar.navbar {
+// 		/* bootstrap override */
+// 		min-height: 40px !important;
+// 		margin-bottom: 0;
+// }
+// #sportscafe-topnavbar.navbar-fixed-top {
+// 		/* bootstrap override */
+// 		border-width: 0;
+// }
+// #sportscafe-topnavbar .navbar-nav > li > a {
+// 		padding-top: 10px !important;
+// 		padding-bottom: 10px !important;
+// }
+// #sportscafe-topnavbar .navbar-text {
+// 		margin-top: 10px !important;
+// 		margin-bottom: 10px !important;
+// }
+// #sportscafe-topnavbar .navbar-toggle {
+// 		/* bootstrap override */
+// 		margin-top: 3px;
+// 		margin-bottom: 3px;
+// }
+// #sportscafe-topnavbar .navbar-brand {
+// 		/* bootstrap override */
+// 		height: 40px;
+// 		padding: 0;
+// }
+// #sportscafe-topnavbar .navbar-brand img {
+// 		margin: 2px;
+// 		height: 36px;
+// }
+
+//
+// #sportscafe-topnavbar.navbar-inverse {
+// 		background-color: #194586;
+// 		border-color: #080808;
+// 		box-shadow: 0px 2px 5px #888888;
+//     height: 40px;
+// }
+//
+// .navbar-nav>li {
+// 		color: #fff;
+// 		font-weight: bold;
+//     background-color: #163e78;
+//     height: 40px;
+// }
+//
+// #sportscafe-topnavbar.navbar-inverse .navbar-nav>.active>a{
+// 		color: #fff;
+// 		font-weight: bold;
+//     background-color: #14376b;
+//     height: 40px;
+// }
+//
+// #sportscafe-topnavbar.navbar-nav>li>.dropdown-menu {
+//     margin-top: 0;
+//     border-top-left-radius: 0;
+//     border-top-right-radius: 0;
+// }
+//
+// .navbar-inverse .navbar-nav>.open>a{
+// 		color: #fff;
+// 		font-weight: bold;
+//     background-color: #14376b;
+// 	  height: 40px;
+// }
+//
+// .navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:focus, .navbar-inverse .navbar-nav>.open>a:hover {
+// 		color: #fff;
+// 		font-weight: bold;
+// 		background-color: #14376b;
+// 		height: 40px;
+// }
+//
+// #sportscafe-topnavbar.navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle:hover {
+// 		background-color: #163e78;
+// 		color: black;
+// }
+//
+// #sportscafe-topnavbar.navbar-inverse .navbar-toggle {
+// 		border-color: rgba(255, 255, 255, 0);
+// }
+//
+//
+//
+//
+// .sc2-navbar {
+// 		background-color: #194586;
+// 		height: 4em;
+// 		box-shadow: 0px 2px 5px #888888;
+// }
+// .sc2-navbar-menulogo {
+// 		background-color: #e5deda;
+// 		-webkit-transform: skew(-20deg);
+// 		-moz-transform: skew(20deg);
+// 		-o-transform: skew(20deg);
+// 		height: 40px;
+// 		margin-right: 25px;
+// 		margin-left: 25px;
+// }
+// .sc2-navabr-in-menu-logo {
+// 		background-color: white;
+// 		-webkit-transform: skew(-2deg);
+// 		-moz-transform: skew(20deg);
+// 		-o-transform: skew(20deg);
+// 		height: 40px;
+// 		margin-right: 10px;
+// 		margin-left: 10px;
+// }
+// .sc2-navbar-logoo {
+// 		postion: relative;
+// 		width: 100%;
+// 		height: 100%;
+// }
+// .sc2-navbar-emptyspace {
+// 		-webkit-transform: skew(-20deg);
+// 		-moz-transform: skew(20deg);
+// 		-o-transform: skew(20deg);
+// }
+//
+// .sc2-navbar-menu{
+// 	background-color: #194586;
+// 	height:4em;
+// 	box-shadow: 0px 2px 5px #888888;
+// }
+// .sc2-navbar-menu-logo{
+// 	background-color: #e5deda;
+// 	-webkit-transform: skew(-20deg);
+// 	   -moz-transform: skew(20deg);
+// 	     -o-transform: skew(20deg);
+// 			 height: 40px;    margin-right: 25px;
+//     margin-left: 25px;
+// }
+// .sc2-navbar-in-menu-logo{
+// 	background-color:white;
+// 	-webkit-transform: skew(-2deg);
+// 	   -moz-transform: skew(20deg);
+// 	     -o-transform: skew(20deg);
+// 			 height: 40px;
+// 			 margin-right: 10px;
+// margin-left: 10px;
+// }
+// .sc2-navbar-logoo{
+// 	postion: relative;
+// 	width: 100%;
+// 	height: 100%;
+// }
+// #sportscafe-topnavbar.navbar.navbar-toggle {
+// 		position: relative;
+// 		float: right;
+// 		margin-right: $navbar-padding-horizontal;
+// 		padding: 9px 10px;
+// 		@include navbar-vertical-align(34px);
+// 		background-color: transparent;
+// 		background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+// 		border-radius: $border-radius-base;
+// }
+// #sportscafe-topnavbar.navbar {
+// 		position: relative;
+// 		min-height: 40px; // Ensure a navbar always shows (e.g., without a .navbar-brand in collapsed mode)
+// 		margin-bottom: $navbar-margin-bottom;
+// 		border: 1px solid transparent;
+// 		border-bottom: 2px solid #ce2127;
+// 		background-color: #194586;
+//
+// }
+// #sportscafe-topnavbar.navbar-inverse .navbar-nav > li > a {
+//       font-weight: bolder;
+// }
+
+#login-dp {
+		min-width: 250px;
+		padding: 14px 14px 0;
+		overflow: hidden;
+		background-color: rgba(255, 255, 255, .8);
+}
+#login-dp .help-block {
+		font-size: 12px
+}
+#login-dp .bottom {
+		background-color: rgba(255, 255, 255, .8);
+		border-top: 1px solid #ddd;
+		clear: both;
+		padding: 14px;
+}
+#login-dp .social-buttons {
+		margin: 12px 0
+}
+#login-dp .social-buttons a {
+		width: 49%;
+}
+#login-dp .form-group {
+		margin-bottom: 10px;
+}
+.btn-fb {
+		color: #fff;
+		background-color: #3b5998;
+}
+.btn-fb:hover {
+		color: #fff;
+		background-color: #496ebc
+}
+.btn-tw {
+		color: #fff;
+		background-color: #55acee;
+}
+.btn-tw:hover {
+		color: #fff;
+		background-color: #59b5fa;
+}
+@media(max-width:1200px) {
+		#login-dp {
+				background-color: inherit;
+				color: #fff;
+		}
+		#login-dp .bottom {
+				background-color: inherit;
+				border-top: 0 none;
+		}
+}
