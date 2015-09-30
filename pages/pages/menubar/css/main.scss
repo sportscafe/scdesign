@@ -3,3 +3,81 @@
 @import 'bootstrap_overrides_navbar';
 @import 'topnavbar';
 @import '../../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap';
+
+
+nav {
+	background-color: #194586 !important;
+	.navbar-nav {
+		padding-left: 30px;
+		> li {
+			&:first-child {
+	            a {
+	                // background: #173f7c;
+	                color: #ffffff;
+	                &:after {
+	                	    content: " ";
+    position: absolute;
+    bottom: 20px;
+    border-bottom: 1px solid #ce2127;
+    width: 58px;
+    left: 0;
+    right: 0;
+    margin: auto;
+	                }
+	            }
+	        }
+	        &.active {
+	            a {
+	                // background: #173f7c;
+	                color: #ffffff;
+	            }
+	        }
+			> a {
+				position: relative;
+				z-index: 1;
+				display: block;
+				padding: 20px 30px;
+				color: rgba(255,255,255,0.5);
+				&:hover,
+				&:focus {
+					background: transparent !important;
+				}
+				&:before {
+					content: " ";
+					position: absolute;
+					width: 100%;
+					left: 0;
+					right: 0;
+					top: 0;
+					bottom: 0;
+					margin: auto;
+					transform: skewX(-35deg);
+					background: #173f7c;
+					z-index: -1;
+				}
+			}
+		}
+	}
+	.navbar-brand {
+		background: transparent !important;
+		img {
+			overflow: hidden;
+		}
+		position: relative;
+		padding: 20px 25px;
+    	height: 60px;
+		&:before {
+			content: " ";
+			position: absolute;
+			width: 100%;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			margin: auto;
+			transform: skewX(-35deg);
+			background: #fff;
+			z-index: 0;
+		}
+	}
+}
