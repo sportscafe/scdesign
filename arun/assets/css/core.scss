@@ -209,7 +209,7 @@ a:hover {
         border-right: none;
         border-bottom: 2px solid $alt-blue;
         width: 33.33%;
-        a { 
+        a {
             border: none;
             color: $black;
             display: block;
@@ -221,10 +221,15 @@ a:hover {
             height: 31px;
             border-radius: 0;
         }
+        &.active {
+            a {
+                color: $white;
+                border-bottom: 1px solid $red;
+            }
+        }
         &:first-child {
             a {
                 background: #ededed;
-                color: rgba(0,0,0,0.5);
             }
         }
         &:nth-child(2),
@@ -233,7 +238,7 @@ a:hover {
                 padding-left: 30px;
             }
         }
-        &:nth-child(2), 
+        &:nth-child(2),
         &:nth-child(3) {
             a {
                 background: #dfdfdf;
@@ -277,7 +282,7 @@ a:hover {
             }
         }
     }
-    
+
     .tabs-content {
         overflow: hidden;
         .tab-content {
@@ -1181,7 +1186,7 @@ nav{
                         &::before {
                             left: -38px;
                         }
-                            
+
                     }
                     .goal-info {
                         float: right;
@@ -1207,7 +1212,7 @@ nav{
                             border-left: none;
                             border-right: 38px solid transparent;
                         }
-                            
+
                     }
                     .goal-info {
                         float: left;
