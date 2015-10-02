@@ -1,0 +1,111 @@
+<!doctype html>
+<html ng-app="ui.bootstrap.demo">
+	<head>
+		<title>SportCafe Article Page</title>
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-animate.js"></script>
+    <script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.13.4.js"></script>
+    <script src="demo.js"></script>
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="assets/css/core.css">
+	</head>
+	<body>
+		<div class="wrapper" ng-controller="DatepickerDemoCtrl">
+			<nav class="clearfix navbar">
+				<div class="pull-left logo">
+					<a href="#">
+						<img src="assets/images/logo.svg" alt="">
+					</a>
+				</div>
+				<ul class="pull-left">
+					<li class="hero"><a href="">LIVE SCORES</a></li><li><a href="">FIXTURES</a></li><li><a href="">ABOUT US</a></li><li><a href="">BLOG</a></li>
+				</ul>
+				<div class="pull-right profile-settings">
+					<div class="circle-pic">
+						<img src="assets/images/dude.png" alt="">
+					</div>
+					<div class="profile-name">
+						<a href="">John Smith <span class="icon-arrow-down"></span></a>
+					</div>
+				</div>
+				<div class="streak pull-right">
+					<a href="">
+						<img src="assets/images/streak.png" alt="">
+					</a>
+				</div>
+			</nav>
+			<div layout="row" class="layout layout-row layout-wrap layout-sm layout-sm-column layout-padding live_score">
+				<!-- <div flex="" class="flex flex-md-20 flex-lg-20 flex-gt-lg-20 hide-sm hide-md"></div> -->
+				<div class="flex">
+					<div class="fixture-nav clearfix">
+						<div class="col-md-4 text-center">
+							<div class="row">
+								<div class="nav-label pull-left">
+								ISL
+							</div>
+							<div class="btn-group">
+							  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							    SELECT TEAM <span class="caret"></span>
+							  </button>
+							  <ul class="dropdown-menu">
+							    <li><a href="#">Action</a></li>
+							    <li><a href="#">Another action</a></li>
+							    <li><a href="#">Something else here</a></li>
+							    <li role="separator" class="divider"></li>
+							    <li><a href="#">Separated link</a></li>
+							  </ul>
+							</div>
+							</div>
+						</div>
+						<div class="col-md-4 text-center">
+							<div class="date-wrapper" ng-controller="DatepickerDemoCtrl">
+								<span class="text">SELECT DATE</span>
+								<input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dt" is-open="status.opened" min-date="minDate" max-date="maxDate" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
+								<span class="input-group-btn">
+					                <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+					            </span>
+								<!-- <a href=""><i class="glyphicon glyphicon-calendar"></i></a> -->
+								<!-- <div>
+									<input type="date" class="form-control" datepicker-popup ng-model="dt" is-open="status.opened" min-date="minDate" max-date="maxDate" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
+						              <span class="input-group-btn">
+						                <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+						              </span>
+								</div> -->
+								<div class="day-selector">
+									<a href="" class="pull-left prev-week"><i class="glyphicon glyphicon-triangle-left"></i></a>
+									<ul class="pull-left">
+										<li><a href="" class="active">09</a><span>Mon</span></li>
+										<li><a href="">10</a><span>Tue</span></li>
+										<li><a href="">11</a><span>Wed</span></li>
+										<li><a href="">12</a><span>Thu</span></li>
+										<li><a href="">13</a><span>Fri</span></li>
+										<li><a href="">14</a><span>Sat</span></li>
+										<li><a href="">14</a><span>Sun</span></li>
+									</ul>
+									<a href="" class="pull-left next-week"><i class="glyphicon glyphicon-triangle-right"></i></a>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 text-center">
+							<div class="btn-group">
+							  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							    SELECT LOCATION <span class="caret"></span>
+							  </button>
+							  <ul class="dropdown-menu">
+							    <li><a href="#">Action</a></li>
+							    <li><a href="#">Another action</a></li>
+							    <li><a href="#">Something else here</a></li>
+							    <li role="separator" class="divider"></li>
+							    <li><a href="#">Separated link</a></li>
+							  </ul>
+							</div>
+						</div>
+					</div>	
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+				<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	</body>
+</html>

@@ -398,6 +398,7 @@ a:hover {
 
 nav{
     box-shadow: 0 5px 5px -5px #333;
+    margin-bottom: 50px !important;
     &.navbar{
         margin-bottom: 0;
         border-radius: 0;
@@ -1243,6 +1244,140 @@ nav{
                 height: 3px;
                 margin: auto;
                 background-color: #e8e8e8;
+            }
+        }
+    }
+    .fixture-nav {
+        background: #343434;
+        border-bottom: 5px solid $red;
+        color: $white;
+        .nav-label {
+            background-color: $red;
+            color: $white;
+            padding: 13px 13px 13px 20px;
+            position: relative;
+            margin-right: 50px;
+            font-size: 19px;
+            max-height: 45px;
+            &:after {
+                content: " ";
+                position: absolute;
+                right: -32px;
+                top: 0;
+                border-bottom: 45px solid $red;
+                border-right: 33px solid transparent;
+            }
+        }
+        .btn-group {
+            margin-top: 10px;
+            .dropdown-toggle {
+                border: none;
+                background: none;
+                color: $white;
+            }
+        }
+        .date-wrapper {
+            position: relative;
+            padding-top: 15px;
+            input {
+                height: 0px;
+                padding: 0;
+                width: 0;
+                border: 1px solid #343434;
+                display: inline-block;
+                vertical-align: top;
+                margin-top: 13px;
+            }
+            span.text, 
+            .input-group-btn {
+                display: inline-block;
+                vertical-align: top;
+                button {
+                    background: none;
+                    border: none;
+                    color: $white;
+                    padding: 0;
+                }
+            }
+            i {
+                margin-left: 1px;
+            }
+            .day-selector {
+                position: absolute;
+                bottom: -39px;
+                left: 0;
+                right: 0;
+                z-index: 1;
+                width: 270px;
+                margin: auto;
+                &:before {
+                    content: " ";
+                    position: absolute;
+                    transform: skewX(145deg);
+                    background: #f8f8f8;
+                    border: 1px solid $border-grey;
+                    bottom: -2px;
+                    left: 0;
+                    margin: 0;
+                    padding: 0;
+                    height: 25px;
+                    width: 100%;
+                    z-index: -1;
+                }
+                a {
+                    color: $txt-grey;
+                    &.prev-week {
+                        padding-left: 10px;
+                    }
+                }
+                ul {
+                    margin: 0 15px;
+                    padding: 0;
+                    li {
+                        list-style-type: none;
+                        display: inline-block;
+                        vertical-align: top;
+                        position: relative;
+                        span {
+                            position: absolute;
+                            bottom: -18px;
+                            color: $black;
+                            font-size: 11px;
+                            width: 31px;
+                            left: -6px;
+                            display: block;
+                        }
+                        &:last-child {
+                            a {
+                                margin-right: 0;
+                            }
+                        }
+                         a {
+                            font-size: 12px;
+                            vertical-align: top;
+                            display: inline-block;
+                            padding: 2px 2px;
+                            z-index: 1;
+                            position: relative;
+                            margin-right: 6px;
+                            &.active {
+                                color: $white;
+                                font-weight: 800;
+                                &:before {
+                                    content: " ";
+                                    position: absolute;
+                                    background-color: $red;
+                                    transform: skewX(145deg);
+                                    width: 30px;
+                                    height: 25px;
+                                    left: -6px;
+                                    top: -4px;
+                                    z-index: -1;
+                                }
+                            }
+                         }
+                    }
+                }
             }
         }
     }
