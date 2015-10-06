@@ -61,9 +61,10 @@
 						<div class="col-md-4 text-center">
 							<div class="date-wrapper" ng-controller="DatepickerDemoCtrl">
 								<span class="text">SELECT DATE</span>
-								<input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dt" is-open="status.opened" min-date="minDate" max-date="maxDate" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
+								<input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dt" is-open="status.opened" min-date="minDate" max-date="maxDate" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close"  show-button-bar="false" />
 								<span class="input-group-btn">
-					                <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+					                <button type="button" class="btn btn-default calender-opener big-screen hidden-xs hidden-sm" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+					                <button type="button" class="btn btn-default calender-opener visible-xs visible-sm" ng-click="open($event)"><span class="caret"></span></button>
 					            </span>
 								<!-- <a href=""><i class="glyphicon glyphicon-calendar"></i></a> -->
 								<!-- <div>
@@ -72,7 +73,7 @@
 						                <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
 						              </span>
 								</div> -->
-								<div class="day-selector">
+								<div class="day-selector hidden-xs hidden-sm">
 									<a href="" class="pull-left prev-week"><i class="glyphicon glyphicon-triangle-left"></i></a>
 									<ul class="pull-left">
 										<li><a href="" class="active">09</a><span>Mon</span></li>
@@ -107,5 +108,8 @@
 		</div>
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 				<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+				<script type="text/javascript">
+
+				</script>
 	</body>
 </html>

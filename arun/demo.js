@@ -26,7 +26,8 @@ angular.module('ui.bootstrap.demo').controller('DatepickerDemoCtrl', function ($
 
   $scope.dateOptions = {
     formatYear: 'yy',
-    startingDay: 1
+    startingDay: 1,
+    showWeeks: false
   };
 
   $scope.formats = ['dd-MMMM-yyyy', 'yyyy/MM/dd', 'dd.MM.yyyy', 'shortDate'];

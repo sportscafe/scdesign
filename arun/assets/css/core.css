@@ -1206,6 +1206,48 @@ nav.navbar .profile-settings .profile-name a span {
 }
 .wrapper .fixture-nav .date-wrapper {
   position: relative;
+  color: #333;
+}
+.wrapper .fixture-nav .date-wrapper .dropdown-menu {
+  padding: 0;
+  border-radius: 0;
+  top: 47px !important;
+}
+.wrapper .fixture-nav .date-wrapper .dropdown-menu table:focus {
+  outline: 0;
+  box-shadow: none;
+}
+.wrapper .fixture-nav .date-wrapper .dropdown-menu table thead {
+  background: #ce2127;
+  color: #ffffff;
+}
+.wrapper .fixture-nav .date-wrapper .dropdown-menu table thead th {
+  font-weight: 300;
+  font-size: 12px;
+}
+.wrapper .fixture-nav .date-wrapper .dropdown-menu table thead .btn {
+  background: #ce2127;
+  color: #ffffff;
+}
+.wrapper .fixture-nav .date-wrapper .dropdown-menu table thead tr:nth-child(2) th {
+  padding-bottom: 5px;
+}
+.wrapper .fixture-nav .date-wrapper .dropdown-menu table .btn {
+  border: none;
+  border-radius: 0;
+  padding: 9px 13px;
+}
+.wrapper .fixture-nav .date-wrapper .dropdown-menu table .btn.active {
+  background: none;
+  font-weight: bold;
+  font-size: 18px;
+  box-shadow: none;
+  color: #000000;
+}
+.wrapper .fixture-nav .date-wrapper .dropdown-menu table .btn.active span {
+  color: #000000;
+}
+.wrapper .fixture-nav .date-wrapper .text {
   padding-top: 15px;
 }
 .wrapper .fixture-nav .date-wrapper input {
@@ -1221,6 +1263,7 @@ nav.navbar .profile-settings .profile-name a span {
 .wrapper .fixture-nav .date-wrapper .input-group-btn {
   display: inline-block;
   vertical-align: top;
+  color: #ffffff;
 }
 .wrapper .fixture-nav .date-wrapper span.text button,
 .wrapper .fixture-nav .date-wrapper .input-group-btn button {
@@ -1229,12 +1272,39 @@ nav.navbar .profile-settings .profile-name a span {
   color: #ffffff;
   padding: 0;
 }
+.wrapper .fixture-nav .date-wrapper span.text button.calender-opener,
+.wrapper .fixture-nav .date-wrapper .input-group-btn button.calender-opener {
+  padding-top: 14px;
+  padding-bottom: 7px;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-radius: 0;
+  position: relative;
+}
+.wrapper .fixture-nav .date-wrapper span.text button.calender-opener.big-screen:before,
+.wrapper .fixture-nav .date-wrapper .input-group-btn button.calender-opener.big-screen:before {
+  content: "";
+  position: absolute;
+  background: #464646;
+  transform: skewX(161deg);
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 36px;
+  left: -4px;
+  right: 0;
+}
+.wrapper .fixture-nav .date-wrapper span.text button.calender-opener:focus,
+.wrapper .fixture-nav .date-wrapper .input-group-btn button.calender-opener:focus {
+  outline: 0;
+}
 .wrapper .fixture-nav .date-wrapper i {
   margin-left: 1px;
+  font-size: 18px;
 }
 .wrapper .fixture-nav .date-wrapper .day-selector {
   position: absolute;
-  bottom: -39px;
+  bottom: -30px;
   left: 0;
   right: 0;
   z-index: 1;
@@ -1247,7 +1317,7 @@ nav.navbar .profile-settings .profile-name a span {
   transform: skewX(145deg);
   background: #f8f8f8;
   border: 1px solid #c2c2c2;
-  bottom: -2px;
+  bottom: 0;
   left: 0;
   margin: 0;
   padding: 0;
@@ -1462,6 +1532,18 @@ nav.navbar .profile-settings .profile-name a span {
   nav.navbar .logo {
     width: 100%;
     text-align: center;
+  }
+}
+@media (max-width: 991px) and (min-width: 0) {
+  .nav-label {
+    width: 100%;
+  }
+  .nav-label:after {
+    border: none !important;
+  }
+
+  .wrapper .fixture-nav .date-wrapper .dropdown-menu {
+    left: 18% !important;
   }
 }
 @media (max-width: 960px) and (min-width: 0) {

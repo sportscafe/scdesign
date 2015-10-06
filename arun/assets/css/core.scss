@@ -1278,7 +1278,53 @@ nav{
         }
         .date-wrapper {
             position: relative;
-            padding-top: 15px;
+            color: #333;
+                .dropdown-menu {
+                    padding: 0;
+                    border-radius: 0;
+                    top: 47px !important;
+                    table {
+                        &:focus {
+                            outline: 0;
+                            box-shadow: none;
+                        }
+                        thead {
+                            background: $red;
+                            color: $white;
+                            th {
+                                font-weight: 300;
+                                font-size: 12px;
+                            }
+                            .btn {
+                                background: $red;
+                                color: $white;
+                            }
+                            tr:nth-child(2) {
+                                th {
+                                    padding-bottom: 5px;
+                                }
+                            }
+                        }
+                        .btn {
+                        border: none;
+                        border-radius: 0;
+                        padding: 9px 13px;
+                        &.active {
+                            background: none;
+                            font-weight: bold;
+                            font-size: 18px;
+                            box-shadow: none;
+                            color: $black;
+                            span {
+                                color: $black;
+                            }
+                        }
+                    }
+                }
+            }
+            .text {
+                padding-top: 15px;
+            }
             input {
                 height: 0px;
                 padding: 0;
@@ -1292,19 +1338,44 @@ nav{
             .input-group-btn {
                 display: inline-block;
                 vertical-align: top;
-                button {
+                color: $white;
+                button{
                     background: none;
                     border: none;
                     color: $white;
                     padding: 0;
+                    &.calender-opener {
+                        padding-top: 14px;
+                        padding-bottom: 7px;
+                        padding-left: 4px;
+                        padding-right: 4px;
+                        border-radius: 0;
+                        position: relative;
+                        &.big-screen:before {
+                            content: "";
+                            position: absolute;
+                            background: #464646;
+                            transform: skewX(161deg);
+                            top: 0;
+                            bottom: 0;
+                            height: 100%;
+                            width: 36px;
+                            left: -4px;
+                            right: 0;
+                        }
+                        &:focus {
+                            outline: 0;
+                        }
+                    }
                 }
             }
             i {
                 margin-left: 1px;
+                font-size: 18px;
             }
             .day-selector {
                 position: absolute;
-                bottom: -39px;
+                bottom: -30px;
                 left: 0;
                 right: 0;
                 z-index: 1;
@@ -1316,7 +1387,7 @@ nav{
                     transform: skewX(145deg);
                     background: #f8f8f8;
                     border: 1px solid $border-grey;
-                    bottom: -2px;
+                    bottom: 0;
                     left: 0;
                     margin: 0;
                     padding: 0;
@@ -1527,6 +1598,18 @@ nav{
     }
 }
 
+@media (max-width: 991px) and (min-width: 0) {
+    .nav-label {
+        width: 100%;
+        &:after {
+            border: none !important;
+        }
+    }
+    .wrapper .fixture-nav .date-wrapper .dropdown-menu{
+        left: 18% !important;
+    }
+}
+
 @media (max-width: 960px) and (min-width: 0) {
     nav.navbar .logo {
         width: 100%;
@@ -1575,9 +1658,6 @@ nav{
         margin-bottom: 20px;
     }
 }
-
-
-
 
 
 
