@@ -366,10 +366,11 @@ nav {
   margin-bottom: 50px !important;
 }
 nav.navbar {
-  margin-bottom: 0;
+  margin-bottom: 0 !important;
   border-radius: 0;
   border: none;
   background: #194586;
+  z-index: 1;
 }
 nav.navbar .logo {
   width: 18%;
@@ -1162,17 +1163,279 @@ nav.navbar .profile-settings .profile-name a span {
   left: 0;
 }
 .wrapper .live_score .line-graph {
+  background: #ffffff;
   height: 100px;
   position: relative;
 }
-.wrapper .live_score .line-graph:after {
+.wrapper .live_score .line-graph .graph-tag {
+  position: relative;
+}
+.wrapper .live_score .line-graph .graph-tag:before {
   content: " ";
   position: absolute;
+  left: 0;
+  top: 0;
+  width: 60px;
+  height: 60px;
+  border-style: solid;
+  border-width: 60px 60px 0 0;
+  border-color: #194586 transparent transparent transparent;
+  z-index: 2;
+}
+.wrapper .live_score .line-graph .graph-tag:after {
+  content: "Graphs";
+  position: absolute;
+  z-index: 3;
+  color: rgba(255, 255, 255, 0.79);
+  transform: rotate(-45deg);
+  width: 100px;
+  height: 100px;
+  left: 26px;
+  font-size: 14px;
+  font-weight: 700;
+  top: -18px;
+}
+.wrapper .live_score .line-graph:after {
+  content: "";
+  position: absolute;
   width: 100%;
-  top: 40px;
-  height: 3px;
+  top: 50px;
+  height: 5px;
   margin: auto;
   background-color: #e8e8e8;
+}
+.wrapper .live_score .line-graph > ul {
+  position: relative;
+  height: 100px;
+  margin-left: 60px;
+  margin-right: 20px;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+.wrapper .live_score .line-graph > ul li {
+  display: inline-block;
+  list-style-type: none;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding-top: 2px;
+  z-index: 99;
+}
+.wrapper .live_score .line-graph > ul li:first-child, .wrapper .live_score .line-graph > ul li:last-child {
+  content: " ";
+  position: absolute;
+  bottom: auto;
+  top: 20px;
+  color: #194586;
+  font-weight: 600;
+}
+.wrapper .live_score .line-graph > ul li:first-child:after, .wrapper .live_score .line-graph > ul li:last-child:after {
+  content: " ";
+  position: absolute;
+  height: 8px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0;
+  bottom: -10px;
+  border: 1px solid #b2b2b2;
+}
+.wrapper .live_score .line-graph > ul li:last-child {
+  right: 0;
+  left: auto;
+}
+.wrapper .live_score .line-graph > ul li.card {
+  font-size: 12px;
+  border-radius: 2px;
+  box-shadow: 0px 2px 2px 1px #ccc;
+  height: 32px;
+  width: 20px;
+  background: #fff;
+  text-align: center;
+  font-size: 12px;
+  top: 35px;
+}
+.wrapper .live_score .line-graph > ul li.card.red:after, .wrapper .live_score .line-graph > ul li.card.yellow:after {
+  content: " ";
+  position: absolute;
+  z-index: 9;
+  width: 10px;
+  height: 10px;
+  bottom: 4px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.wrapper .live_score .line-graph > ul li.card.red:after {
+  background: #ce2127;
+}
+.wrapper .live_score .line-graph > ul li.card.yellow:after {
+  background: #fff729;
+}
+.wrapper .live_score .line-graph > ul li.card.arrows span {
+  background: url(../images/live_score_sprites.png) no-repeat;
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-size: 82px;
+  background-position: -33px -2px;
+}
+.wrapper .live_score .line-graph > ul li.card.football {
+  background: #194586;
+  height: 38px;
+  width: 25px;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 600;
+}
+.wrapper .live_score .line-graph > ul li.card.football span {
+  background: url(../images/live_score_sprites.png) no-repeat;
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-size: 82px;
+  background-position: -41px -43px;
+  margin: auto;
+}
+.wrapper .player_score > header {
+  margin-top: 60px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.wrapper .player_score > header .ps_title {
+  position: relative;
+  z-index: 0;
+  color: #ffffff;
+  height: 40px;
+  width: 282px;
+  display: inline-block;
+  vertical-align: top;
+  margin-left: -5px;
+  text-align: center;
+  padding: 10px 0px;
+}
+.wrapper .player_score > header .ps_title:after {
+  content: " ";
+  position: absolute;
+  left: 0;
+  z-index: -1;
+  transform: skewX(-45deg);
+  height: 40px;
+  width: 282px;
+  top: 0px;
+}
+.wrapper .player_score > header .ps_title.black:after {
+  background: #000000;
+}
+.wrapper .player_score > header .ps_title.blue:after {
+  background: #194586;
+}
+.wrapper .player_score > header.subs {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.wrapper .player_score > header.subs .ps_title {
+  font-size: 19px;
+  font-weight: 100;
+}
+.wrapper .player_score .scores {
+  position: relative;
+}
+.wrapper .player_score .scores.sub_scorers .flex {
+  padding-top: 40px;
+}
+.wrapper .player_score .scores .ground-icon {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 0;
+  text-align: center;
+  width: 100px;
+}
+.wrapper .player_score .scores .ground-icon img {
+  width: 100%;
+}
+.wrapper .player_score .scores .lineup-wrapper {
+  margin-left: 100px;
+}
+.wrapper .player_score .scores .lineup-wrapper header {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.wrapper .player_score .scores .lineup-wrapper header img {
+  margin-right: 10px;
+  max-height: 67px;
+}
+.wrapper .player_score .scores .lineup-wrapper ul {
+  padding-left: 20px;
+  margin: 0;
+}
+.wrapper .player_score .scores .lineup-wrapper ul li {
+  list-style-type: none;
+  font-weight: 600;
+  font-size: 17px;
+  margin-bottom: 20px;
+}
+.wrapper .player_score .scores .lineup-wrapper ul li:last-child {
+  margin-bottom: 0;
+}
+.wrapper .player_score .scores .lineup-wrapper ul li .tee-num,
+.wrapper .player_score .scores .lineup-wrapper ul li .cards,
+.wrapper .player_score .scores .lineup-wrapper ul li .single-arrow,
+.wrapper .player_score .scores .lineup-wrapper ul li .football,
+.wrapper .player_score .scores .lineup-wrapper ul li .blue-arrow {
+  display: inline-block;
+  vertical-align: top;
+  width: 24px;
+  height: 24px;
+  text-align: center;
+  background: url(../images/live_score_sprites.png) no-repeat;
+  background-size: 95px;
+}
+.wrapper .player_score .scores .lineup-wrapper ul li .tee-num {
+  background-position: -29px -35px;
+  margin-right: 10px;
+  width: 30px;
+  height: 30px;
+  background-size: 126px;
+  margin-top: -3px;
+  font-size: 10px;
+  font-weight: 700;
+  padding-top: 12px;
+}
+.wrapper .player_score .scores .lineup-wrapper ul li .single-arrow {
+  background-position: -45px -23px;
+}
+.wrapper .player_score .scores .lineup-wrapper ul li .blue-arrow {
+  background-position: 1px -2px;
+}
+.wrapper .player_score .scores .lineup-wrapper ul li .cards {
+  background-position: -70px -27px;
+}
+.wrapper .player_score .scores .lineup-wrapper ul li .double-orange {
+  background-position: -52px -23px;
+  width: 10px;
+}
+.wrapper .player_score .scores .lineup-wrapper ul li .double-orange:last-of-type {
+  margin-left: -3px;
+}
+.wrapper .player_score .scores .lineup-wrapper ul li .double-blue {
+  background-position: -4px -2px;
+  width: 10px;
+}
+.wrapper .player_score .scores .lineup-wrapper ul li .double-blue:last-of-type {
+  margin-left: -3px;
+}
+.wrapper .player_score .scores .lineup-wrapper ul li .football {
+  background-position: -66px -2px;
+}
+.wrapper .player_score .scores .flex {
+  padding-bottom: 60px;
+}
+.wrapper .player_score .scores .flex.first-col {
+  border-right: 1px solid #c4c4c4;
 }
 .wrapper .fixture-nav {
   background: #343434;
